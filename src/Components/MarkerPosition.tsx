@@ -3,7 +3,7 @@ import { Marker, Popup } from "react-leaflet";
 import L, { LatLngTuple } from "leaflet";
 import { useMap } from "react-leaflet";
 import { IpData } from "../Data/IpDataInterface";
-import customIcon from "../../public/icon-location.svg";
+import customIcon from "/icon-location.svg";
 
 export default function MarkerPosition({
   IpValue,
