@@ -7,7 +7,7 @@ import { Helmet } from "react-helmet";
 import MarkerPosition from "./Components/MarkerPosition";
 
 function App() {
-  const [Ip, setIP] = useState("192.212.174.101");
+  const [Ip, setIP] = useState("8.8.8.8");
   const [IpValue, setIpValue] = useState<any | null>(null);
 
   useEffect(() => {
