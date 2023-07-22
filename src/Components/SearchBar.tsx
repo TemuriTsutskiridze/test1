@@ -37,17 +37,17 @@ export default function SearchBar({
       <InfoData>
         <ArticleContainer>
           <Title>IP Address</Title>
-          <Info>{IpValue?.query}</Info>
+          <Info>{IpValue?.ip}</Info>
         </ArticleContainer>
         <Br />
         <ArticleContainer>
           <Title>Location</Title>
-          <Info>{IpValue?.city}</Info>
+          <Info>{IpValue?.location.city}</Info>
         </ArticleContainer>
         <Br />
         <ArticleContainer>
           <Title>Timezone</Title>
-          <Info>{IpValue?.timezone}</Info>
+          <Info>{IpValue?.location.timezone}</Info>
         </ArticleContainer>
         <Br />
         <ArticleContainer>
