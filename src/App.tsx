@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { IpData } from "./Data/IpDataInterface";
 import { MapContainer, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import SearchBar from "./Components/SearchBar";
@@ -9,11 +8,13 @@ import MarkerPosition from "./Components/MarkerPosition";
 
 function App() {
   const [Ip, setIP] = useState("192.212.174.101");
-  const [IpValue, setIpValue] = useState<IpData | null>(null);
+  const [IpValue, setIpValue] = useState<any | null>(null);
 
   useEffect(() => {
     const fetchIpData = async () => {
-      const response = await fetch(`https://ipapi.co/json/${Ip}`);
+      const response = await fetch(
+        `https://geo.ipify.org/api/v2/country,city?apiKey=at_f08ryL7xKDMbFwmM67YjKn9eNbAbQ&ipAddress=${Ip}`
+      );
       const data = await response.json();
       setIpValue(data);
     };
@@ -25,7 +26,9 @@ function App() {
     }
   };
   const handleClick = async () => {
-    const response = await fetch(`https://ipapi.co/json/${Ip}`);
+    const response = await fetch(
+      `https://geo.ipify.org/api/v2/country,city?apiKey=at_f08ryL7xKDMbFwmM67YjKn9eNbAbQ&ipAddress=${Ip}`
+    );
     const data = await response.json();
     setIpValue(data);
   };
@@ -56,7 +59,7 @@ function App() {
       />
       {IpValue && (
         <MapContainer
-          center={[IpValue.lat, IpValue.lon]}
+          center={[IpValue.lat, IpValue.lng]}
           zoom={10}
           scrollWheelZoom={true}
           style={{ height: "100vh", zIndex: 1 }}

@@ -1,25 +1,22 @@
 export interface IpData {
-  query: string;
-  status: string;
-  continent: string;
-  continentCode: string;
-  country: string;
-  countryCode: string;
-  region: string;
-  regionName: string;
-  city: string;
-  district: string;
-  zip: string;
-  lat: number;
-  lon: number;
-  timezone: string;
-  offset: number;
-  currency: string;
+  ip: string;
+  location: {
+    country: string;
+    region: string;
+    city: string;
+    lat: number;
+    lng: number;
+    postalCode: string;
+    timezone: string;
+    geonameId: number;
+  };
+  domains: string[];
+  as: {
+    asn: number;
+    name: string;
+    route: string;
+    domain: string;
+    type: string;
+  };
   isp: string;
-  org: string;
-  as: string;
-  asname: string;
-  mobile: boolean;
-  proxy: boolean;
-  hosting: boolean;
 }
