@@ -59,7 +59,7 @@ function App() {
       />
       {IpValue && (
         <MapContainer
-          center={[IpValue.lat, IpValue.lng]}
+          center={[IpValue.location.lat, IpValue.location.lng]}
           zoom={10}
           scrollWheelZoom={true}
           style={{ height: "100vh", zIndex: 1 }}
