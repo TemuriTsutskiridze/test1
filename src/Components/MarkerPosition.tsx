@@ -6,8 +6,8 @@ import customIcon from "/icon-location.svg";
 
 export default function MarkerPosition({ IpValue }: { IpValue: any | null }) {
   const position: LatLngTuple = useMemo(() => {
-    return [IpValue?.lat ?? 0, IpValue?.lon ?? 0];
-  }, [IpValue?.lat, IpValue?.lon]);
+    return [IpValue?.location.lat ?? 0, IpValue?.location.lng ?? 0];
+  }, [IpValue?.location.lat, IpValue?.location.lng]);
 
   const map = useMap();
 
