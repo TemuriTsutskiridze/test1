@@ -13,7 +13,7 @@ export default function SearchBar({
   handleClick: () => void;
   Ip: string;
   setIP: (ip: string) => void;
-  IpValue: IpData | null;
+  IpValue: any | null;
   setIpValue: React.Dispatch<React.SetStateAction<IpData | null>>;
   Handleinput: () => void;
   handleKey: (e: React.KeyboardEvent<HTMLInputElement>) => void;
