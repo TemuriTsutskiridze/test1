@@ -13,7 +13,7 @@ function App() {
 
   useEffect(() => {
     const fetchIpData = async () => {
-      const response = await fetch(`https://ip-api.com/json/${Ip}`);
+      const response = await fetch(`https://ipapi.co/json/${Ip}`);
       const data = await response.json();
       setIpValue(data);
     };
@@ -25,7 +25,7 @@ function App() {
     }
   };
   const handleClick = async () => {
-    const response = await fetch(`https://ip-api.com/json/${Ip}`);
+    const response = await fetch(`https://ipapi.co/json/${Ip}`);
     const data = await response.json();
     setIpValue(data);
   };
